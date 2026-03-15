@@ -11,7 +11,7 @@ module.exports = defineConfig({
         target: 'http://192.168.121.188:8081', 
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '' 
+          '^/api': ''
         }
       }
     }
