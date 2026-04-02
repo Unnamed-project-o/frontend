@@ -1,26 +1,26 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
     name: 'Login',
-    component: ()=> import("../views/Login")
+    component: () => import('../views/Login.vue'),
   },
-   {
+  {
     path: '/home',
     name: 'Home',
-    component: ()=> import("../views/Home")
+    component: () => import('../views/Home.vue'),
   },
-]
+  {
+    path: '/login_register',
+    name: 'LoginRegister',
+    component: () => import('../views/NewLogin.vue'),
+  },
+];
 
-
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes,
-  mode: 'history',             /* 这两行用来消去URL中的 # */
-  base: process.env.BASE_URL,
-})
+});
 
-export default router
+export default router;
