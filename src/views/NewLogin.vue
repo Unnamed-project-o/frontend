@@ -777,13 +777,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.search {
-    display: none;
-}
-
-.search.open {
-    display: block;
-}
-</style>
