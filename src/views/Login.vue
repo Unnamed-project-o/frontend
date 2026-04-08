@@ -4,7 +4,7 @@
 
       <div class="tabs">
         <span :class="{ active: isLoginMode }" @click="switchMode(true)">用户登录</span>
-        <span :class="{ active: !isLoginMode }" @click="switchMode(false)">新用户注册</span>
+        <span :class="{ active: !isLoginMode }" @click="switchMode(false)">用户注册</span>
       </div>
 
       <form v-if="isLoginMode" @submit.prevent="handleLogin">
